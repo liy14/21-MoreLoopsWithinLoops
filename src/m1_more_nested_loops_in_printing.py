@@ -252,13 +252,21 @@ def numbers_constant_forward(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+
+    # for k in range(r):
+    #     for j in range(maxnum * n + n - 1):
+    #         for g in range(1, maxnum + 1):
+    #             if j//n == g - 1:
+    #                 print(g, end='')
+    #             if j == g * n:
+    #                 print(' ', end='')
+    #     print('')
+
     for k in range(r):
-        for j in range(maxnum * n + n - 1):
-            for g in range(1, maxnum + 1):
-                if j//n == g - 1:
-                    print(g, end='')
-                if j == g * n:
-                    print(' ', end='')
+        for j in range(1, maxnum + 1):
+            for g in range(n):
+                print(j, end='')
+            print(' ', end='')
         print('')
 
 
